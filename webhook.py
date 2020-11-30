@@ -23,7 +23,7 @@ def makeResponse(req):
     result = req.get("queryResult")
     parameters = result.get("parameters")
     city = parameters.get("city")
-    date = '2020-11-30'
+    date = parameters.get("date")
     r = requests.get("http://api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=031904a6907a7bf1d2f35f31ffc81df6")
     json_object = r.json()
     weather = json_object['list']
