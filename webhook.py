@@ -19,7 +19,7 @@ def webhook():
     return r
     
 def makeResponse(req):
-    result = req.get("result")
+    result = req.get("queryResult")
     parameters = result.get("parameters")
     city = parameters.get("city")
     date = '2020-11-30'
